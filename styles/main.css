@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* $변수명:변수등록값; */
+/* @mixin 그룹변수명 {반복속성:값; 반복속성:값} */
+/* 폰트 */
+body {
+  width: 100%;
+}
+body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  z-index: 1000;
+}
+body header .header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+body header .header .logo a h1 img {
+  width: 177px;
+  height: 36px;
+}
+body header .header .menu {
+  display: flex;
+  gap: 80px;
+}
+body header .header .menu a {
+  color: #fff;
+  font-size: 1.063rem;
+}
+body header .header .right_icons {
+  display: flex;
+  gap: 20px;
+}
+body #wrap {
+  background-color: #F5F3E7;
+  color: #54341B;
+}
+body #wrap .main_brn {
+  width: 100%;
+  height: 100vh;
+}
+body #wrap .main_brn img {
+  width: 100%;
+  height: 100%;
+}
+body #wrap {
+  text-align: center;
+}
+body #wrap h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+body #wrap p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+body #wrap .best_section h2 {
+  margin-bottom: 10px;
+}
+body #wrap .best_section p {
+  margin-bottom: 20px;
+}
+body #wrap .best_section {
+  text-align: center;
+  padding: 80px 240px 160px;
+}
+body #wrap .best_section .best_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+body #wrap .best_section .best_menu li .action {
+  font-weight: 600;
+}
+body #wrap .best_section .best_menu li a {
+  color: #54341B;
+}
+body #wrap .best_section .best_products {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+  align-items: center;
+}
+body #wrap .best_section .best_products li {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  width: 272px;
+}
+body #wrap .best_section .best_products li .img_box {
+  width: 100%;
+  height: 340px;
+}
+body #wrap .best_section .best_products li .img_box img {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+body #wrap .best_section .best_products li a {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+}
+body #wrap .best_section .best_products li a .product_name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #54341B;
+}
+body #wrap .best_section .best_products li a .product_info {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #846852;
+  margin: 0;
+}
+body #wrap .best_section .best_products li a .product_price {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #54341B;
+  margin: 0;
+}
+body #wrap .new_section {
+  padding: 160px 0;
+}
+body #wrap .new_section .new_contents {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+  justify-content: center;
+}
+body #wrap .new_section .new_contents div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  color: #54341B;
+}
+body #wrap .new_section .new_contents div .coment {
+  color: #54341B;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0;
+}
+body #wrap .new_section .new_contents div .coment .top {
+  position: relative;
+  padding-bottom: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body #wrap .new_section .new_contents div .coment .top h2 {
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+body #wrap .new_section .new_contents div .coment .top h2 em {
+  font-weight: 700;
+}
+body #wrap .new_section .new_contents div .coment .top .new_info {
+  text-align: right;
+  color: #CDB4A0;
+  font-size: 0.875rem;
+  width: 100%;
+}
+body #wrap .new_section .new_contents div .coment .top::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CDB4A0;
+}
+body #wrap .new_section .new_contents div .coment .new_coment {
+  text-align: left;
+  font-size: 0.875;
+  margin-top: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */

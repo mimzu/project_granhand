@@ -1,0 +1,19 @@
+/* $변수명:변수등록값; */
+/* @mixin 그룹변수명 {반복속성:값; 반복속성:값} */
+
+/* 폰트 */
+$header-menu: 1.063rem;
+$bg_color: #F5F3E7;
+$font_color: #54341B;
+$font_color2: #846852;
+$font_color3:#CDB4A0;
+
+
+@mixin flexrow {
+    display:flex; flex-flow:row nowrap; align-items: center; justify-content: space-between;
+}
+
+@mixin h2font {
+    font-size: 1.875rem;
+    font-weight: 600;
+}

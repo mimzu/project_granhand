@@ -8,7 +8,8 @@
     <title>그랑핸드</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
-    <!-- 구글 웹 폰트 -->
+    <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <!-- 스와이퍼 -->
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -17,13 +18,13 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- js -->
-    <!-- main.css -->
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <header> <!-- position fix  scroll 시 색 변경 #000-->
         <ul class="header">
             <li class="logo">
-                <a href="#"><h1><img src="#" alt="그랑핸드"></h1></a>
+                <a href="#"><h1><img src="./images/logo.png" alt="그랑핸드"></h1></a>
             </li>
             <li class="menu">
                 <a href="#">Shop</a>
@@ -32,21 +33,21 @@
                 <a href="#">Stores</a>
                 <a href="#">Index</a>
             </li>
-            <li class="right_ico ns">
-                <a href="#"><img src="#" alt="검색"></a>
-                <a href="#"><img src="#" alt="로그인"></a>
-                <a href="#"><img src="#" alt="장바구니"></a>
+            <li class="right_icons">
+                <a href="#"><img src="./images/search_icon.png" alt="검색"></a>
+                <a href="#"><img src="./images/profile_icon.png" alt="로그인"></a>
+                <a href="#"><img src="./images/bag_icon.png" alt="장바구니"></a>
             </li>
         </ul>
     </header>
     <div id="wrap">
-        <div class="main_brn"><img src="#" alt="그랑핸드 필름사진상 대상작"></div> <!-- 수정 필요, 대상작 말고 매장 사진을 넣을지? 대상작 활용해서 제품 사진을 넣을지? -->
+        <div class="main_brn"><img src="./images/main_bg.jpg" alt="그랑핸드 필름사진상 대상작"></div> <!-- 수정 필요, 대상작 말고 매장 사진을 넣을지? 대상작 활용해서 제품 사진을 넣을지? -->
         <hr>
         <div class="best_section">
             <h2>Best Seller</h2>
             <p>가장 많이 사랑받는 상품을 소개합니다</p>
             <ul class="menu best_menu">
-                <li><a href="">전체</a></li>
+                <li><a href="" class="action">전체</a></li>
                 <li><a href="">사쉐</a></li>
                 <li><a href="">멀티퍼퓸</a></li>
                 <li><a href="">핸드크림</a></li>
@@ -56,58 +57,58 @@
             <ul class="best_products">
                 <!-- li들 hover -->
                 <li>
-                    <a href=""><img src="#" alt=""></a>
-                    <a href=""><h2 class="product_name">Marine Orchid Sachet</h2></a>
+                    <a href="" class="img_box"><img src="#" alt=""></a>
+                    <a href=""><h3 class="product_name">Marine Orchid Sachet</h3></a>
                     <a href=""><p class="product_info">마린 오키드 사쉐 40g</p></a>
                     <a href=""><p class="product_price">18,000 KRW</p></a>
                     
                 </li>
                 <li>
-                    <a href=""><img src="#" alt=""></a>
-                    <a href=""><h2 class="product_name">Kyujang Sachet</h2></a>
+                    <a href="" class="img_box"><img src="#" alt=""></a>
+                    <a href=""><h3 class="product_name">Kyujang Sachet</h3></a>
                     <a href=""><p class="product_info">규장 사쉐 40g</p></a>
                     <a href=""><p class="product_price">18,000 KRW</p></a>
                 </li>
                 <li>
-                    <a href=""><img src="#" alt=""></a>
-                    <a href=""><h2 class="product_name">Susie Salmon Sachet</h2></a>
+                    <a href="" class="img_box"><img src="#" alt=""></a>
+                    <a href=""><h3 class="product_name">Susie Salmon Sachet</h3></a>
                     <a href=""><p class="product_info">수지살몬 사쉐 40g</p></a>
                     <a href=""><p class="product_price">18,000 KRW</p></a>
                 </li>
                 <li>
-                    <a href=""><img src="#" alt=""></a>
-                    <a href=""><h2 class="product_name">Susie Salmon Multi Perfume</h2></a>
+                    <a href="" class="img_box"><img src="#" alt=""></a>
+                    <a href=""><h3 class="product_name">Susie Salmon Multi Perfume</h3></a>
                     <a href=""><p class="product_info">수지살몬 멀티퍼퓸 100g/200g</p></a>
                     <a href=""><p class="product_price">35,000 KRW</p></a>
                 </li>
                 <li>
-                    <a href="#"><img src="#" alt=""></a>
-                    <a href="#"><h2 class="product_name">Susie Salmon Multi Perfume</h2></a>
+                    <a href="#" class="img_box"><img src="#" alt=""></a>
+                    <a href="#"><h3 class="product_name">Susie Salmon Multi Perfume</h3></a>
                     <a href="#"><p class="product_info">수지살몬 멀티퍼퓸 100g/200g</p></a>
                     <a href="#"><p class="product_price">35,000 KRW</p></a>
                     
                 </li>
                 <li>
-                    <a href="#"><img src="#" alt=""></a>
-                    <a href="#"><h2 class="product_name">Susie Salmon Hand Cream</h2></a>
+                    <a href="#" class="img_box"><img src="#" alt=""></a>
+                    <a href="#"><h3 class="product_name">Susie Salmon Hand Cream</h3></a>
                     <a href="#"><p class="product_info">수지살몬 핸드크림 60g</p></a>
                     <a href="#"><p class="product_price">25,000 KRW</p></a>
                 </li>
                 <li>
-                    <a href="#"><img src="#" alt=""></a>
-                    <a href="#"><h2 class="product_name">Marine Orchid Multi Perfume</h2></a>
+                    <a href="#" class="img_box"><img src="#" alt=""></a>
+                    <a href="#"><h3 class="product_name">Marine Orchid Multi Perfume</h3></a>
                     <a href="#"><p class="product_info">마린오키드 멀티퍼퓸 100g/200g</p></a>
                     <a href="#"><p class="product_price">35,000 KRW</p></a>
                 </li>
                 <li>
-                    <a href="#"><img src="#" alt=""></a>
-                    <a href="#"><h2 class="product_name">Toit Vert Sachet</h2></a>
+                    <a href="#" class="img_box"><img src="#" alt=""></a>
+                    <a href="#"><h3 class="product_name">Toit Vert Sachet</h3></a>
                     <a href="#"><p class="product_info">트와베르 사쉐 40g</p></a>
                     <a href="#"><p class="product_price">18,000 KRW</p></a>
                 </li>
                 <li>
-                    <a href="#"><img src="#" alt=""></a>
-                    <a href="#"><h2 class="product_name">Toit Vert Sachet</h2></a>
+                    <a href="#" class="img_box"><img src="#" alt=""></a>
+                    <a href="#"><h3 class="product_name">Toit Vert Sachet</h3></a>
                     <a href="#"><p class="product_info">트와베르 사쉐 40g</p></a>
                     <a href="#"><p class="product_price">18,000 KRW</p></a>
                 </li>
@@ -117,22 +118,26 @@
             </ul>
         </div>
         <hr>
-        <div class="full_brn"><a href="#"><img src="#" alt=""></a></div>
+        <div class="full_brn"><a href="#"><img src="./images/bnr_ad.jpg" alt=""></a></div>
         <hr>
         <div class="new_section">
             <div class="left"><h2>NEW</h2></div>
             <p>새로운 상품을 소개합니다.</p>
             <div class="new_contents">
-                <img src="#" alt="수지살몬 바디워시">
+                <img class="new_left_img" src="./images/new_img.png" alt="수지살몬 바디워시">
                 <div>
                     <a href="#">
-                        <img src="#" alt="수지살몬 바디워시">
+                        <img src="./images/new_img2.png" alt="수지살몬 바디워시">
                     </a>
-                    <h2><em>SUSIE SALMON.</em> BODY WASH</h2>
-                    <p class="new_info">달콤한 과일을 먹은 뒤의 낮잠<br>A midday nap after eating sweet fruits.</p>
-                    <!-- after로 선 넣기 -->
-                    <p class="new_coment">그랑핸드에서 가장 사랑받는 수지살몬 향이<br>바디워시로 출시되었습니다!</p>
-                    <p class="new_coment">특별한 향과 넉넉한 용량의 바디워시로 매일의 배스 타임을<br>하루 중 가장 즐거운 휴식 시간으로 만들어 보세요.</p>
+                    <a href="" class="coment">
+                        <div class="top">
+                            <h2><em>SUSIE SALMON.</em> BODY WASH</h2>
+                            <p class="new_info">달콤한 과일을 먹은 뒤의 낮잠<br>A midday nap after eating sweet fruits.</p>
+                        </div>
+                        <!-- after로 선 넣기 -->
+                        <p class="new_coment">그랑핸드에서 가장 사랑받는 수지살몬 향이<br>바디워시로 출시되었습니다!</p>
+                        <p class="new_coment">특별한 향과 넉넉한 용량의 바디워시로 매일의 배스 타임을<br>하루 중 가장 즐거운 휴식 시간으로 만들어 보세요.</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -367,7 +372,7 @@
             </div>
         </div>
         <hr>
-        <div class="full_brn"><img src="" alt=""></div>
+        <div class="full_brn"><img src="./images/bnr_ad2.png" alt=""></div>
         <hr>
         <div class="stores_section">
             <h2>Stores</h2>
@@ -417,5 +422,7 @@
             </div>
         </div>
     </footer>
+
+    
 </body>
 </html>
