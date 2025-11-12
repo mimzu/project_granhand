@@ -1,15 +1,15 @@
 @use './common.scss' as *;
 
-body { width:100%;
+body { width:1920;
     header { position:fixed; top:0; left:0; width:100%; padding:0 30px;
         z-index:1000;
-        .header { @include flexrow; height: 70px;
+        .header { @include flexrow; height: 70px; justify-content: space-between;
             .logo { 
                 a{
                     h1 { img{width: 177px; height: 36px;}}
                 }
             }
-            .menu { display:flex; gap:80px; 
+            .menu { display:flex; justify-content: space-between; width: 600px;
                 a {
                     color:#fff; font-size:$header-menu;
                 }
@@ -21,82 +21,143 @@ body { width:100%;
         }
     }
     #wrap { background-color:$bg_color; color:$font_color;
+        /* 공통 디자인 */
+        /*
+        @include title;
+        @include section_info;
+        @include product_name;
+        @include product_info;
+        @include product_price;
+        */
+        
         .main_brn {
             width: 100%; height: 100vh;
             img {width: 100%; height: 100%;}
         }
-        text-align: center;
-        h2 {@include h2font; }
-        p { font-weight: 500; font-size:1rem;}
         .best_section {
-            h2 {margin-bottom:10px;}
-            p {margin-bottom:20px;}
             text-align:center; 
             padding: 80px 240px 160px;
+            h2 {@include title; margin-bottom:10px;}
+            p {@include section_info; margin-bottom:20px;}
             .best_menu {
-                display:flex; flex-flow:row nowrap; justify-content: center; gap:30px; margin-bottom:20px;font-size:0.875rem;
-                li{ .action {font-weight: 600;}
-                    a{color:$font_color;}
+                display:flex; flex-flow:row nowrap; justify-content: center; gap:30px; margin-bottom:20px; font-size:0.875rem;
+                li{ .action {font-weight: 600; color:$font_color;}
+                    a{color:$font_color2;}
                 }
             }
             .best_products { 
-                display:flex; flex-flow:row wrap; gap:16px; align-items: center;
-                li { display:flex; flex-flow:column nowrap; gap:10px;
-                    width: 272px; 
-                    .img_box { width: 100%; height: 340px;
-                        img{
+                display:flex; flex-flow:row wrap; gap:16px; align-content: center; justify-content: space-between;
+                li {
+                    flex: 1 1 calc(20% - 16px); 
+                    .img_box {height: 340px;
+                        img{ border:1px solid $bg_color;
                             width: 100%;
-                            height: 100%;
-                            background-color:aqua;}
+                            height: auto;
+                        }
+                        img:hover {@include hover; }
                     }
-                    a{ display:flex; flex-flow:column nowrap; gap:5px; 
-                        .product_name {font-size:1rem; font-weight: 600; color:$font_color;}
-                        .product_info {font-size:0.75rem; font-weight: 400; color:$font_color2; margin:0}
-                        .product_price {font-size:0.875rem; font-weight: 500; color:$font-color; margin:0}
+                    a{
+                        .product_name {@include product_name; margin-top:10px;}
+                        .product_name:hover {color:$point-green;}
+                        .product_info {@include product_info; margin: 5px 0;}
+                        .product_info:hover {color:$point-green;}
+                        .product_price {@include product_price;}
+                        .product_price:hover {color:$point-green;}
                     }
+                    .best_more { p {padding: 159px 0; line-height: 120%; color:#fff; font-weight: 300;}
+                    }
+                }
+                li:nth-child(10) {
+                    background-image: url('../images/best_more.png');
+                    width: 100%; height: 409px;
                 }
             }
         }
-        .new_section { padding: 160px 0;
+        .new_section { padding: 160px 0; text-align: center;
+            h2 {margin-bottom:10px; @include title;}
+            p {margin-bottom:20px; @include section_info;}
             .new_contents { display:flex; flex-flow:row nowrap; gap:30px; justify-content: center;
                 .new_left_img {}
                 div { display:flex; flex-flow:column nowrap; gap:20px; color:$font_color;
                     a {}
                     .coment { color:$font_color;
-                        display:flex; flex-flow:column nowrap; gap:0;
+                        display:flex; flex-flow:column nowrap; 
                         .top { position:relative; padding-bottom:15px;
-                            display:flex; flex-flow:row nowrap; justify-content: space-between;
-                            h2 { text-align: left; font-size:1.25rem; font-weight: 400; em{font-weight: 700;}}
-                            .new_info {text-align: right; color:$font_color3; font-size:0.875rem; width: 100%;}
+                            display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
+                            h2 {text-align: left; font-size:1.25rem; font-weight: 400; width: 100%; em{font-weight: 700;} }
+                            .new_info { text-align: right; color:$font_color3; font-size:0.875rem; width: 100%; font-weight: 300; line-height: 120%;}
                         }
                         .top::after {
                             content: ''; position:absolute; bottom:0; left:0; 
                             width: 100%; height: 1px; background-color:$font_color3;
                         }
-                        .new_coment {text-align: left; font-size:0.875; margin-top:15px;}
+                        .new_coment {text-align: left; font-size:0.875; margin-top:15px; line-height: 140%;}
                     }
                 }
             }
         }
-        .monthly_section {
-            .left {
-                h2 {}
-                p {}
+        .monthly_section { background-image: url('../images/books_bg.png'); position: relative; width: 100%; height: 650px;
+            .left { position:absolute; left:80px; top:64px; color:#fff; text-align: left;
+                h2 {margin-bottom:10px; @include title;}
+                p {font-weight: 300; @include section_info;}
             }
-            .monthly_right {
-                .monthly_text {
-                    li {
-                        h2 {}
-                        p {}
-                        .monthly_coment_ko {}
-                        .monthly_coment_en {}
+            .monthly_right { 
+                background-image: url('../images/paper_bg.png'); 
+                position:absolute; right:0; bottom:0;height: 580px;
+                display:flex; flex-flow:row nowrap; 
+                .monthly_text { text-align: left; height: 580px;
+                    li:first-child {
+                        padding:80px 50px 0 80px; 
+                    }
+                    li {width: 550px; padding:0 30px 0 80px;
+                        h2 {margin-bottom:10px; margin-left:40px;line-height: 150%; @include title;}
+                        p {font-size:0.875rem;margin-bottom:5px; line-height: 150%; @include section_info;}
+                        p:nth-child(2) {margin-left:20px;}
+                        .monthly_coment_ko {font-size:0.875rem; color:$font_color2; line-height: 150%; margin:48px 0;}
+                        .monthly_coment_en {font-size:0.875rem; color:#AE917A; line-height: 150%;}
                     }
                 }
-                .swiper {
-                    .swiper-bottom-prev {}
-                    .swiper-bottom-next {}
+                .swiper_container {width: 935px; height: 579px; padding-top:218px;
+                    #monthly_swiper { 
+                        .swiper-bottom-prev {}
+                        .swiper-bottom-next {}
+                        .swiper-wrapper { width: 855px; height: 311px; display:flex; flex-flow:row nowrap; gap:20px; bottom:0;
+                            .swiper-slide {width: 172px!important;
+                                a { 
+                                    img {margin-bottom:10px;}
+                                }
+                                .product_name {@include product_name;}
+                                .product_info {@include product_info; margin:5px 0;}
+                                .product_price {@include product_price;}
+                            }
+                            .swiper-slide-active {width: 172px!important;}
+                            .swiper-slide-next {width: 172px!important;}
+                        }
+                    }
                 }
             }
         }
+        .category_section { text-align: center; padding: $full 0 0;
+            .category_title {
+                h2 {@include title; margin-bottom:10px;}
+                p {@include section_info; margin-bottom:20px;}
+            }
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        h3 {}
+                        a {
+                            span {}
+                            img {}
+                        }
+                    }
+                }
+            }
+        }
+        .journal_section {
+            h2 {}
+            .journal_menu {}
+        }
+
     }
 }
