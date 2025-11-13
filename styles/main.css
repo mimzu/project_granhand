@@ -83,9 +83,18 @@ body #wrap .best_section .best_menu {
 body #wrap .best_section .best_menu li .action {
   font-weight: 600;
   color: #54341B;
+  display: inline-block;
 }
 body #wrap .best_section .best_menu li a {
   color: #846852;
+}
+body #wrap .best_section .best_menu li .action::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #846852;
+  margin-top: 5px;
 }
 body #wrap .best_section .best_products {
   display: flex;
@@ -345,6 +354,268 @@ body #wrap .category_section .category_title p {
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: 20px;
+}
+body #wrap .category_section .swiper {
+  width: 1440px;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide {
+  width: 250px !important;
+  margin-right: 20px;
+  height: 302px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide h3 {
+  font-size: 1.875rem;
+  text-align: right;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  right: 30px;
+  top: 90px;
+  z-index: 900;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide a {
+  padding: 5px 20px 7px;
+  border: 1px solid #fff;
+  border-radius: 23px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  position: absolute;
+  right: 30px;
+  top: 180px;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide a span {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 300;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+  background-image: url("../images/category_1.png");
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
+  background-image: url("../images/category_2.png");
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(3) {
+  background-image: url("../images/category_3.png");
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(3) h3 {
+  top: 125px;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
+  background-image: url("../images/category_4.png");
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(4) h3 {
+  top: 125px;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(5) {
+  background-image: url("../images/category_5.png");
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(5) h3 {
+  top: 125px;
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(6) {
+  background-image: url("../images/category_1.png");
+}
+body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(6) h3 {
+  top: 125px;
+}
+body #wrap .journal_section {
+  padding: 80px 30px;
+  text-align: center;
+}
+body #wrap .journal_section h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+body #wrap .journal_section .journal_menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+body #wrap .journal_section .journal_menu .action {
+  font-weight: 600;
+  color: #54341B;
+}
+body #wrap .journal_section .journal_menu a {
+  color: #846852;
+}
+body #wrap .journal_section .journal_menu .action::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #846852;
+  margin-top: 5px;
+}
+body #wrap .journal_section .view {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+body #wrap .journal_section .view a {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+body #wrap .journal_section .view a p {
+  font-size: 0.75rem;
+  color: #846852;
+}
+body #wrap .journal_section .view a .action {
+  color: #54341B;
+  font-weight: 700;
+}
+body #wrap .journal_section .view a:first-child::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 13px;
+  background-color: #846852;
+}
+body #wrap .journal_section .contents .card {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 20px;
+  height: 61px;
+}
+body #wrap .journal_section .contents .card .img_box {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+body #wrap .journal_section .contents .card .img_box img {
+  width: 100%;
+}
+body #wrap .journal_section .contents .card .card_text {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body #wrap .journal_section .contents .card .card_text .title {
+  display: float;
+  width: 100%;
+  color: #54341B;
+}
+body #wrap .journal_section .contents .card .card_text .title h3 {
+  float: left;
+  padding: 3px 0;
+}
+body #wrap .journal_section .contents .card .card_text .title h3 em {
+  font-weight: 700;
+}
+body #wrap .journal_section .contents .card .card_text .title .date {
+  float: left;
+  color: #CDB4A0;
+  font-size: 0.875rem;
+  padding: 5px 10px;
+}
+body #wrap .journal_section .contents .card .card_text .title .view {
+  float: right;
+  color: #CDB4A0;
+  font-size: 0.875rem;
+  padding: 5px;
+  font-weight: 300;
+}
+body #wrap .journal_section .contents .card .card_text .detail {
+  display: none;
+  overflow: hidden;
+  text-align: left;
+}
+body #wrap .journal_section .contents .card .card_text .detail p {
+  color: #846852;
+  line-height: 120%;
+  font-size: 0.875rem;
+}
+body #wrap .journal_section .contents .action {
+  height: 125px;
+}
+body #wrap .journal_section .contents .action .img_box {
+  display: inline-block;
+  overflow: hidden;
+}
+body #wrap .journal_section .contents .action .img_box img {
+  height: auto;
+  width: 100%;
+}
+body #wrap .journal_section .contents .action .card_text .detail {
+  display: inline-block;
+}
+body #wrap .journal_section .page button {
+  color: #CDB4A0;
+  font-size: 0.875rem;
+  margin-right: 10px;
+}
+body #wrap .journal_section .page .action {
+  color: #846852;
+}
+body #wrap .journal_section .page .page_btn_next {
+  margin: 0px;
+}
+body footer {
+  background-color: #F5F3E7;
+}
+body footer .footer_section {
+  background-image: url("../images/footer.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: 50px 240px;
+  color: #fff;
+}
+body footer .footer_section h1 {
+  font-size: 3.75rem;
+  margin-bottom: 50px;
+  width: 80%;
+}
+body footer .footer_section .sns {
+  width: 20%;
+  height: 172px;
+}
+body footer .footer_section .sns a {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+  align-items: center;
+}
+body footer .footer_section .sns a p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body footer .footer_section .footer_btm {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body footer .footer_section .footer_btm .footer_left p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+body footer .footer_section .footer_btm .footer_left .footer_info {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 130%;
+}
+body footer .footer_section .footer_btm .footer_right {
+  display: inline-block;
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */

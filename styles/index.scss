@@ -40,9 +40,10 @@ body { width:1920;
             h2 {@include title; margin-bottom:10px;}
             p {@include section_info; margin-bottom:20px;}
             .best_menu {
-                display:flex; flex-flow:row nowrap; justify-content: center; gap:30px; margin-bottom:20px; font-size:0.875rem;
-                li{ .action {font-weight: 600; color:$font_color;}
-                    a{color:$font_color2;}
+                @include menu;
+                li{ .action {@include menu_action; display:inline-block}
+                    a{@include menu_a;}
+                    .action::after {@include menu_action_after;}
                 }
             }
             .best_products { 
@@ -142,22 +143,131 @@ body { width:1920;
                 h2 {@include title; margin-bottom:10px;}
                 p {@include section_info; margin-bottom:20px;}
             }
-            .swiper {
-                .swiper-wrapper {
-                    .swiper-slide {
-                        h3 {}
-                        a {
-                            span {}
+            .swiper {width:1440px;
+                .swiper-wrapper { 
+                    .swiper-slide { width: 250px!important; margin-right:20px; height: 302px; position:relative;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        h3 {
+                            @include category_title;
+                            font-weight: 300;
+                            color:#fff;
+                            position:absolute;
+                            right:30px; 
+                            top:90px;
+                            z-index: 900;
+                        }
+                        a { padding: 5px 20px 7px; border:1px solid #fff; border-radius: 23px;
+                            @include flexrow; gap:10px; width: fit-content; position:absolute; right:30px; top:180px;
+                            span {color:#fff; @include category_btn; }
                             img {}
+                        }
+                    }
+                    .swiper-slide:nth-child(1) {background-image: url('../images/category_1.png');}
+                    .swiper-slide:nth-child(2) {background-image: url('../images/category_2.png');}
+                    .swiper-slide:nth-child(3) {background-image: url('../images/category_3.png');h3{top:125px;}}
+                    .swiper-slide:nth-child(4) {background-image: url('../images/category_4.png');h3{top:125px;}}
+                    .swiper-slide:nth-child(5) {background-image: url('../images/category_5.png');h3{top:125px;}}
+                    .swiper-slide:nth-child(6) {background-image: url('../images/category_1.png');h3{top:125px;}}
+                }
+            }
+        }
+        .journal_section {padding:80px 30px;
+            text-align: center;
+            h2 {@include title;margin-bottom:20px;}
+            .journal_menu {
+                @include menu;
+                .action {@include menu_action;}
+                a {@include menu_a;}
+                .action::after {
+                    @include menu_action_after;
+                }
+            }
+            .view { display:flex; flex-flow:row nowrap; gap: 10px; justify-content: right; margin-bottom:20px;
+                a { display:flex; flex-flow:row nowrap; gap: 10px;
+                    p{font-size:$font-size12; color:$font_color2;}
+                    .action {color:$font-color; font-weight: 700;}
+                }
+                a:first-child::after {
+                    content:''; display:block; width: 1px; height: 13px; background-color:$font_color2; 
+
+                }
+            }
+            .contents {
+                .card {display:flex; flex-flow:row nowrap; margin-bottom:20px; height: 61px;
+                    .img_box {
+                        display:none;
+                        width: 100%; height: auto;
+                        img {width: 100%;}
+                    }
+                    .card_text {background-color:#fff; width: 100%; padding: 20px; 
+                        display:flex; flex-flow: column nowrap; justify-content: space-between;
+                        .title { display:float; width: 100%; color:$font-color;
+                            h3 {float:left; padding:3px 0;
+                                em {font-weight: 700;}
+                            }
+                            .date {float:left;color:$font_color3; font-size:$font-size14; padding:5px 10px;}
+                            .view {float:right; color:$font_color3; font-size:$font-size14; padding:5px; font-weight: 300;}
+                        }
+                        .detail {display:none; 
+                            overflow:hidden;
+                            text-align: left;
+                            p {
+                                color:$font_color2;
+                                line-height: 120%;
+                                font-size:$font-size14
+                            }
+                        }
+                    }
+                }
+                .action { height: 125px;
+                    .img_box {
+                        display:inline-block;
+                        overflow:hidden;
+                        img{height:auto;  width: 100%; }
+                    }
+                    .card_text {
+                        .detail {
+                            display:inline-block;
                         }
                     }
                 }
             }
+            .page {
+                button {color:$font_color3; font-size:$font-size14; margin-right:10px }
+                .action {color:$font_color2;}
+                .page_btn_prev {
+                    img {}
+                }
+                .page_btn_next { margin:0px;
+                    img{}
+                }
+            }
         }
-        .journal_section {
-            h2 {}
-            .journal_menu {}
-        }
-
+    }
+    footer { background-color:$bg_color;
+        .footer_section {
+            background-image: url('../images/footer.png');
+            background-repeat:no-repeat;
+            background-position:top;
+            background-size:cover;
+            padding:50px 240px;
+            color:#fff;
+            h1 {font-size:3.75rem; margin-bottom:50px;  width: 80%}
+            .sns { width: 20%; height: 172px;
+                a {display:flex; flex-flow:row nowrap; gap:5px; align-items: center;
+                    p {color:#fff; font-size:1.5rem; font-weight:500;}
+                }
+            }
+            .footer_btm { 
+                display:flex; flex-flow:row nowrap; 
+                justify-content: space-between; align-items: center;
+                .footer_left {
+                    p {font-size:1.25rem; font-weight: 600; margin-bottom:50px;}
+                    .footer_info {font-size:$font-size14; font-weight: 300; line-height: 130%;}
+                }
+                .footer_right {display:inline-block; text-align: right;} 
+            }
+            }
     }
 }
