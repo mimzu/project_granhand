@@ -7,9 +7,8 @@
     <meta name="keywords" content="">
     <title>그랑핸드</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/reset.css">
     <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
     <!-- 스와이퍼 -->
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -18,7 +17,9 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- js -->
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <header> <!-- position fix  scroll 시 색 변경 #000-->
@@ -41,9 +42,27 @@
         </ul>
     </header>
     <div id="wrap">
-        <div class="main_brn">
-            <img src="./images/main_bg.jpg" alt="그랑핸드 필름사진상 대상작">
-        </div> <!-- 수정 필요, 대상작 말고 매장 사진을 넣을지? 대상작 활용해서 제품 사진을 넣을지? -->
+        <div class="main_brn_swiper swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <video src="./images/video2.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/main_bnr3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/main_bg.jpg" alt="그랑핸드 사진전 대상">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/main_bnr4.jpg" alt="그랑핸드 사진전 대상">
+                </div>
+            </div>
+            <!-- 화살표 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- 페이지네이션 점 -->
+            <div class="swiper-pagination"></div>
+        </div>
         <div class="best_section">
             <h2>Best Seller</h2>
             <p>가장 많이 사랑받는 상품을 소개합니다</p>
@@ -286,7 +305,7 @@
 
             </div>
             <div class="contents">
-                <a herf="#" class="card card1 action">
+                <a herf="#" class="card card1">
                     <div class="img_box"><img src="./images/Rectangle1.png" alt=""></div>
                     <div class="card_text">
                         <div class="title">
@@ -294,10 +313,10 @@
                             <p class="date">2025-10-22</p>
                             <p class="view">조회 233</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
-                <a herf="#" class="card card2">
+                <a herf="#" class="card card2 ">
                     <div class="img_box"><img src="./images/Rectangle2.png" alt=""></div>
                     <div class="card_text">
                         <div class="title">
@@ -305,7 +324,7 @@
                             <p class="date">2025-10-22</p>
                             <p class="view">조회 320</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
                 <a herf="#" class="card card3">
@@ -316,10 +335,10 @@
                             <p class="date">2025-10-13</p>
                             <p class="view">조회 265</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
-                <a herf="#" class="card card4">
+                <a herf="#" class="card card4 action">
                     <div class="img_box"><img src="./images/Rectangle4.png" alt=""></div>
                     <div class="card_text">
                         <div class="title">
@@ -327,7 +346,7 @@
                             <p class="date">2025-09-26</p>
                             <p class="view">조회 1057</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
                 <a herf="#" class="card card5">
@@ -338,7 +357,7 @@
                             <p class="date">2025-09-25</p>
                             <p class="view">조회 1091</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
                 <a herf="#" class="card card6">
@@ -349,7 +368,7 @@
                             <p class="date">2025-09-25</p>
                             <p class="view">조회 466</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
                 <a herf="#" class="card card7">
@@ -360,7 +379,7 @@
                             <p class="date">2025-09-25</p>
                             <p class="view">조회 484</p>
                         </div>
-                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다. </p></div>
+                        <div class="detail"><p>코로나19 이후 공간에 대한 사람들의 인식은 근본적으로 변화했습니다. 이제 사람들은 유명세나 일시적인 트렌드보다 주변 환경과의 유기적 연결, 그리고 자연적인 요소와의 조화를 중요하게 생각하기 시작했습니다. 세계적인 건축가 토머스 헤더윅(Thomas Heatherwick) 또한 획일적이고 공장식 건축에서 벗어나야 한다고 강조합니다.이러한 '환경과의 조화'를 100여 년 전부터 고민하고 실현한 선구적인 인물이 바로 프랭크 로이드 라이트(Frank Lloyd Wright)입니다. 르코르뷔지에와 함께 ‘20세기 건축의 양대 산맥’으로 평가받는 그는, 독특한 미국적 건축 양식을 창조하며 실용성과 자연과의 일체감을 완벽하게 결합한 ‘유기적 건축(Organic Architecture)’의 철학을 제시했습니다. 그의 파란만장한 삶과 논란을 넘어서, 오늘날까지도 많은 이들에게 영향을 주는 그의 건축물은 과연 어떤 모습을 지니고 있을까요?</p></div>
                     </div>
                 </a>
             </div>
@@ -374,32 +393,37 @@
                 <button class="page_btn_next" type="button"><img src="./images/page_next.png" alt=""></button>
             </div>
         </div>
-        <hr>
         <div class="full_brn"><img src="./images/bnr_ad2.png" alt=""></div>
-        <hr>
         <div class="stores_section">
             <h2>Stores</h2>
             <p>스쳐가는 향 하나에도 마음이 머무는 곳, 그 순간을 담아낸 공간, 그랑핸드 스토어</p>
-            <div>
-                <p><em>그랑핸드 가희</em></p> 
-                <a href=""><div>
-                    <span>지역명을 검색해보세요</span>
-                    <img src="" alt="">
-                </div></a>
-                <div class="store_imgs">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
+            <div class="store_info">
+                <a href="" class="selected_store">
+                    <img src="./images/location_on.png" alt="">
+                    <p>Granhand Gahoe 그랑핸드 가희</p>
+                </a>
+                <a href="" class="search_store">
+                    <div>
+                        <span>지역명을 검색해보세요</span>
+                        <img src="./images/nest_tag.png" alt="">
+                    </div>
+                </a>
             </div> 
+            <div class="store_imgs">
+                <img src="./images/store1.png" alt="">
+                <img src="./images/store2.png" alt="">
+                <img src="./images/store3.png" alt="">
+                <img src="./images/store4.png" alt="">
+            </div>
         </div>
     </div>
     <footer>
         <div class="footer_section">
-            <h1>GRANHAND.</h1><!-- 상단좌측 -->
-            <div class="sns"><!-- 상단우측 -->
-                <a href=""><img src="./images/instagram.png" alt=""><p>granhand_official</p></a>
+            <div class="footer_top">
+                <h1>GRANHAND.</h1><!-- 상단좌측 -->
+                <div class="sns"><!-- 상단우측 -->
+                    <a href=""><img src="./images/instagram.png" alt=""><p>granhand_official</p></a>
+                </div>
             </div>
             <div class="footer_btm">
                 <div class="footer_left"><!-- 좌측 정렬 -->
@@ -433,6 +457,19 @@
     <script>
         const categorySwiper = new Swiper("#category_swiper", {
             loop:true,
+        });
+    </script>
+    <script>
+        const mainbnrSwiper = new Swiper(".main_brn_swiper", {
+            loop:true,
+            pagination : {
+                el:'.swiper-pagination',
+                clickable:true,
+            },
+            navigation: {
+                nextEl:'.swiper-button-next',
+                prevEl:'.swiper-button-prev'
+            }
         });
     </script>
 </body>

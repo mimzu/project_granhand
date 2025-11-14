@@ -37,13 +37,13 @@ $half : 80px;
     font-weight: 500; font-size:1rem;
 }
 @mixin product_name{
-    font-size:1rem; font-weight: 600; color:$font_color;
+    font-size:1rem; font-weight: 500; color:$font_color;
 }
 @mixin product_info{
     font-size:0.75rem; font-weight: 400; color:$font_color2; margin:0;
 }
 @mixin product_price{
-    font-size:0.875rem; font-weight: 500; color:$font-color; margin:0
+    font-size:0.75rem; font-weight: 400; color:$font-color; margin:0
 }
 @mixin menu {
     display:flex; flex-flow:row nowrap; justify-content: center; gap:30px; margin-bottom:20px; font-size:0.875rem;
