@@ -32,3 +32,14 @@ links.forEach(link => {
       e.preventDefault(); // 기본 동작 막기
     });
 });
+
+document.addEventListener ('DOMContentLoaded', funcion(){
+    const cards = document.querySelectorAll('.contents .card');
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault ();
+            cards.forEach(c => c.classList.remove('action'));
+            this.classList.add('action');
+        });
+    });
+});

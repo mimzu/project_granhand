@@ -41,13 +41,10 @@ body header .header .right_icons {
   display: flex;
   gap: 20px;
 }
-body header.scroll {
-  background-color: #F5F3E7;
-}
-body header.scroll .header .menu a {
+body header.scroll background-color:red .header .menu a {
   color: #54341B;
 }
-body header.scroll .header .menu a:hover {
+body header.scroll background-color:red .header .menu a:hover {
   color: #9cac45;
 }
 body #wrap {
@@ -120,9 +117,6 @@ body #wrap .best_section .best_menu li .action {
   color: #54341B;
   display: inline-block;
 }
-body #wrap .best_section .best_menu li a {
-  color: #846852;
-}
 body #wrap .best_section .best_menu li .action::after {
   content: "";
   display: block;
@@ -131,7 +125,13 @@ body #wrap .best_section .best_menu li .action::after {
   background-color: #846852;
   margin-top: 5px;
 }
-body #wrap .best_section .best_menu li a:hover {
+body #wrap .best_section .best_menu li .action::after:hover {
+  color: inherit;
+}
+body #wrap .best_section .best_menu li a {
+  color: #846852;
+}
+body #wrap .best_section .best_menu li a:not(.action):hover {
   color: #9cac45;
 }
 body #wrap .best_section .best_products {
