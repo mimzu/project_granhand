@@ -25,21 +25,27 @@ document.addEventListener ("scroll",function() {
     }
 })
 
-/* a태그 기본동작 막기 */
-const links = document.querySelectorAll('a[href="#"]');
-links.forEach(link => {
+// 모든 a 태그 클릭 시 기본 동작 막기
+const allLinks = document.querySelectorAll('a');
+allLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault(); // 기본 동작 막기
+        e.preventDefault();
     });
 });
 
-document.addEventListener ('DOMContentLoaded', funcion(){
-    const cards = document.querySelectorAll('.contents .card');
-    cards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault ();
-            cards.forEach(c => c.classList.remove('action'));
-            this.classList.add('action');
-        });
+const cards = document.querySelectorAll('.card');
+
+console.log(cards);
+
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        // 기존 action 클래스 제거
+        const activeCard = document.querySelector('.card.action');
+        if (activeCard) {
+            activeCard.classList.remove('action');
+        }
+
+        // 클릭한 카드에 action 추가
+        this.classList.add('action');
     });
 });

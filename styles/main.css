@@ -33,9 +33,11 @@ body header .header .menu {
 body header .header .menu a {
   color: #fff;
   font-size: 1.063rem;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
 }
 body header .header .menu a:hover {
   color: #9cac45;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
 }
 body header .header .right_icons {
   display: flex;
@@ -152,17 +154,11 @@ body #wrap .best_section .best_products li .img_box img {
   width: 100%;
   height: auto;
 }
-body #wrap .best_section .best_products li .img_box img:hover {
-  border: 1px solid #846852;
-}
 body #wrap .best_section .best_products li a .product_name {
   font-size: 1rem;
   font-weight: 500;
   color: #54341B;
   margin-top: 10px;
-}
-body #wrap .best_section .best_products li a .product_name:hover {
-  color: #9cac45;
 }
 body #wrap .best_section .best_products li a .product_info {
   font-size: 0.75rem;
@@ -171,23 +167,25 @@ body #wrap .best_section .best_products li a .product_info {
   margin: 0;
   margin: 5px 0;
 }
-body #wrap .best_section .best_products li a .product_info:hover {
-  color: #9cac45;
-}
 body #wrap .best_section .best_products li a .product_price {
   font-size: 0.75rem;
   font-weight: 400;
   color: #54341B;
   margin: 0;
 }
-body #wrap .best_section .best_products li a .product_price:hover {
-  color: #9cac45;
-}
 body #wrap .best_section .best_products li .best_more p {
   padding: 159px 0;
   line-height: 120%;
   color: #fff;
   font-weight: 300;
+}
+body #wrap .best_section .best_products li:hover img {
+  border: 1px solid #846852;
+}
+body #wrap .best_section .best_products li:hover .product_name,
+body #wrap .best_section .best_products li:hover .product_info,
+body #wrap .best_section .best_products li:hover .product_price {
+  color: #9cac45;
 }
 body #wrap .best_section .best_products li:nth-child(10) {
   background-image: url("../images/best_more.png");
@@ -373,6 +371,11 @@ body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .sw
   color: #54341B;
   margin: 0;
 }
+body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper .swiper-slide:hover .product_name,
+body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper .swiper-slide:hover .product_info,
+body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper .swiper-slide:hover .product_price {
+  color: #9cac45;
+}
 body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper .swiper-slide-active {
   width: 172px !important;
 }
@@ -464,7 +467,9 @@ body #wrap .category_section .swiper .swiper-wrapper .swiper-slide:nth-child(6) 
   top: 125px;
 }
 body #wrap .journal_section {
-  padding: 80px 30px;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 80px 0;
   text-align: center;
 }
 body #wrap .journal_section h2 {
@@ -494,6 +499,9 @@ body #wrap .journal_section .journal_menu .action::after {
   height: 2px;
   background-color: #846852;
   margin-top: 5px;
+}
+body #wrap .journal_section .journal_menu a:hover {
+  color: #9cac45;
 }
 body #wrap .journal_section .view {
   display: flex;
@@ -527,6 +535,7 @@ body #wrap .journal_section .contents .card {
   flex-flow: row nowrap;
   margin-bottom: 20px;
   height: 61px;
+  width: 100%;
 }
 body #wrap .journal_section .contents .card .img_box {
   display: none;
@@ -580,6 +589,10 @@ body #wrap .journal_section .contents .card .card_text .detail p {
   color: #846852;
   line-height: 150%;
   font-size: 0.875rem;
+}
+body #wrap .journal_section .contents .card:hover .card_text .title,
+body #wrap .journal_section .contents .card:hover .card_text .detail {
+  color: #9cac45;
 }
 body #wrap .journal_section .contents .action {
   height: auto;
@@ -665,6 +678,8 @@ body footer {
   background-color: #F5F3E7;
 }
 body footer .footer_section {
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
   background-image: url("../images/footer.png");
   background-repeat: no-repeat;
   background-position: top;
@@ -679,9 +694,12 @@ body footer .footer_section .footer_top {
   align-items: center;
   margin-bottom: 50px;
 }
-body footer .footer_section .footer_top h1 {
-  font-size: 3.75rem;
-  width: 80%;
+body footer .footer_section .footer_top a h1 {
+  width: auto;
+  height: 70px;
+}
+body footer .footer_section .footer_top a h1 img {
+  height: 100%;
 }
 body footer .footer_section .footer_top .sns {
   width: 20%;

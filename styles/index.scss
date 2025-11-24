@@ -12,8 +12,9 @@ body { width:1920;
             .menu { display:flex; justify-content: space-between; width: 600px;
                 a {
                     color:#fff; font-size:$header-menu;
+                    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
                 }
-                a:hover {color:$point-green}
+                a:hover {color:$point-green;text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5)}
             }
             .right_icons { display:flex; gap:20px;
                 a {
@@ -92,18 +93,20 @@ body { width:1920;
                             width: 100%;
                             height: auto;
                         }
-                        img:hover {@include hover; }
                     }
                     a{
                         .product_name {@include product_name; margin-top:10px;}
-                        .product_name:hover {color:$point-green;}
                         .product_info {@include product_info; margin: 5px 0;}
-                        .product_info:hover {color:$point-green;}
                         .product_price {@include product_price;}
-                        .product_price:hover {color:$point-green;}
                     }
                     .best_more { p {padding: 159px 0; line-height: 120%; color:#fff; font-weight: 300;}
                     }
+                }
+                li:hover {
+                    img {@include hover; }
+                    .product_name,
+                    .product_info,
+                    .product_price {color:$point-green;}
                 }
                 li:nth-child(10) {
                     background-image: url('../images/best_more.png');
@@ -168,6 +171,12 @@ body { width:1920;
                                 .product_info {@include product_info; margin:5px 0;}
                                 .product_price {@include product_price;}
                             }
+                            .swiper-slide:hover {
+                                .product_name,
+                                .product_info,
+                                .product_price {color:$point-green; }
+
+                            }
                             .swiper-slide-active {width: 172px!important;}
                             .swiper-slide-next {width: 172px!important;}
                         }
@@ -209,7 +218,10 @@ body { width:1920;
                 }
             }
         }
-        .journal_section {padding:80px 30px;
+        .journal_section {
+            width: 1440px;
+            margin:0 auto;
+            padding:80px 0;
             text-align: center;
             h2 {@include title;margin-bottom:20px;}
             .journal_menu {
@@ -219,6 +231,7 @@ body { width:1920;
                 .action::after {
                     @include menu_action_after;
                 }
+                a:hover {color:$point-green;}
             }
             .view { display:flex; flex-flow:row nowrap; gap: 10px; justify-content: right; margin-bottom:20px;
                 a { display:flex; flex-flow:row nowrap; gap: 10px;
@@ -227,13 +240,13 @@ body { width:1920;
                 }
                 a:first-child::after {
                     content:''; display:block; width: 1px; height: 13px; background-color:$font_color2; 
-
                 }
             }
             .contents {
                 .card {
                     display:flex; flex-flow:row nowrap;
                     margin-bottom:20px; height: 61px;
+                    width: 100%;
                     .img_box {
                         display:none;
                         width: 100%; 
@@ -258,6 +271,12 @@ body { width:1920;
                                 font-size:$font-size14
                             }
                         }
+                    }
+                }
+                .card:hover {
+                    .card_text {
+                        .title,
+                        .detail {color:$point-green}
                     }
                 }
                 .action { height: auto;
@@ -309,6 +328,8 @@ body { width:1920;
     }
     footer { background-color:$bg_color;
         .footer_section {
+            border-top-left-radius: 150px;
+            border-top-right-radius: 150px;
             background-image: url('../images/footer.png');
             background-repeat:no-repeat;
             background-position:top;
@@ -317,7 +338,14 @@ body { width:1920;
             color:#fff;
             .footer_top {
                 display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center; margin-bottom:50px;
-                h1 {font-size:3.75rem; width: 80%}
+                a{ 
+                    h1 {
+                        width: auto; height: 70px; 
+                        img {
+                            height: 100%;;
+                        }
+                    }
+                }
                 .sns { width: 20%;
                     a {display:flex; flex-flow:row nowrap; gap:5px; align-items: center; justify-content: right;
                         p {color:#fff; font-size:1.5rem; font-weight:500;}
