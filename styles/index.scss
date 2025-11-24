@@ -238,6 +238,7 @@ body { width:1920;
                     p{font-size:$font-size12; color:$font_color2;}
                     .action {color:$font-color; font-weight: 700;}
                 }
+                a:hover {p {color:$point-green}}
                 a:first-child::after {
                     content:''; display:block; width: 1px; height: 13px; background-color:$font_color2; 
                 }

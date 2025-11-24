@@ -523,6 +523,9 @@ body #wrap .journal_section .view a .action {
   color: #54341B;
   font-weight: 700;
 }
+body #wrap .journal_section .view a:hover p {
+  color: #9cac45;
+}
 body #wrap .journal_section .view a:first-child::after {
   content: "";
   display: block;
