@@ -1,11 +1,9 @@
 
-
 document.addEventListener("scroll", function () {
     const header = document.querySelector("header");
     const mainBnr = document.querySelector(".main_brn_swiper");
     const logoImg = header.querySelector('.logo img');
     const icons = header.querySelectorAll('.right_icons img');
-    const menuLinks = header.querySelectorAll('.menu a'); // ★ 메뉴 글자들
 
     const bannerHeight = mainBnr.offsetHeight;
     const scrollTop = window.scrollY;
@@ -36,10 +34,10 @@ allLinks.forEach(link => {
     });
 });
 
+
+/* 저널 부분 카드 클릭하면 이벤트 발생하는 거 */
 const cards = document.querySelectorAll('.card');
-
 console.log(cards);
-
 cards.forEach(card => {
     card.addEventListener('click', function() {
         // 기존 action 클래스 제거
@@ -51,4 +49,26 @@ cards.forEach(card => {
         // 클릭한 카드에 action 추가
         this.classList.add('action');
     });
+});
+
+
+const monthlySwiper = new Swiper("#monthly_swiper", {
+    loop:false,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+});
+const categorySwiper = new Swiper("#category_swiper", {
+    loop:false,
+    slidesPerView: "auto",
+});
+const mainbnrSwiper = new Swiper(".main_brn_swiper", {
+    loop:true,
+    pagination : {
+        el:'.swiper-pagination',
+        clickable:true,
+    },
+    navigation: {
+        nextEl:'.swiper-button-next',
+        prevEl:'.swiper-button-prev'
+    }
 });

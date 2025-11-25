@@ -23,13 +23,15 @@ body { width:1920;
         }
     }
     header.scroll {
+        background-color:$bg_color;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         .header {
-            background-color:red;
             .menu {
                 a {
                     color:#54341B;
                     text-shadow: none;
                 }
+                a:hover {color:$point-green;}
             }
         }
     }
@@ -122,23 +124,39 @@ body { width:1920;
             p {margin-bottom:20px; @include section_info;}
             .new_contents { display:flex; flex-flow:row nowrap; gap:30px; justify-content: center;
                 .new_left_img {}
-                div { display:flex; flex-flow:column nowrap; gap:20px; color:$font_color;
-                    a {}
-                    a:hover {
-                        border:1px solid $font-color;
+                div { 
+                    display:flex; flex-flow:column nowrap; 
+                    gap:20px; color:$font_color;
+                    width: 672px;
+                    a:nth-child(1) {
+                        display:block;
+                        height: 100%;
+                        width: 100%;
+                        background-image: url('../images/new_img2.png');
+                        background-size:cover;
+                        background-repeat: no-repeat;
+                        background-position:center;
                     }
                     .coment { color:$font_color;
                         display:flex; flex-flow:column nowrap; 
                         .top { position:relative; padding-bottom:15px;
                             display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
-                            h2 {text-align: left; font-size:1.25rem; font-weight: 400; width: 100%; em{font-weight: 700;} }
-                            .new_info { text-align: right; color:$font_color3; font-size:0.875rem; width: 100%; font-weight: 300; line-height: 120%;}
+                            h2 {text-align: left; font-size:1.25rem; font-weight: 400; width: 100%; em{font-weight: 700;} margin:0;}
+                            .new_info { text-align: right; color:$font_color3; font-size:0.875rem; width: 100%; font-weight: 300; line-height: 120%; margin:0;}
                         }
                         .top::after {
                             content: ''; position:absolute; bottom:0; left:0; 
                             width: 100%; height: 1px; background-color:$font_color3;
                         }
                         .new_coment {text-align: left; font-size:0.875; margin-top:15px; line-height: 140%;}
+                    }
+                    .coment:hover {
+                        & > * {color:$point-green;
+                        }
+                        .top {
+                            .new_info {color:$point-green}
+                        }
+                        .top::after {background-color:$point-green}
                     }
                 }
             }
@@ -165,11 +183,11 @@ body { width:1920;
                     }
                 }
                 .swiper_container {width: 935px; height: 579px; padding-top:218px;
-                    #monthly_swiper { 
-                        .swiper-bottom-prev {}
-                        .swiper-bottom-next {}
-                        .swiper-wrapper { width: 855px; height: 311px; display:flex; flex-flow:row nowrap; gap:20px; bottom:0;
-                            .swiper-slide {width: 172px!important;
+                    #monthly_swiper { width: 855px;overflow:hidden;
+                        .swiper-wrapper { 
+                            height: 311px; display:flex; flex-flow:row nowrap; bottom:0;
+                            width: max-content;
+                            .swiper-slide {width: auto;
                                 a { 
                                     img {margin-bottom:10px;}
                                 }
@@ -181,7 +199,6 @@ body { width:1920;
                                 .product_name,
                                 .product_info,
                                 .product_price {color:$point-green; }
-
                             }
                             .swiper-slide-active {width: 172px!important;}
                             .swiper-slide-next {width: 172px!important;}
@@ -373,6 +390,6 @@ body { width:1920;
                     line-height: 150%;
                 } 
             }
-            }
+        }
     }
 }

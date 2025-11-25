@@ -43,10 +43,15 @@ body header .header .right_icons {
   display: flex;
   gap: 20px;
 }
-body header.scroll background-color:red .header .menu a {
-  color: #54341B;
+body header.scroll {
+  background-color: #F5F3E7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-body header.scroll background-color:red .header .menu a:hover {
+body header.scroll .header .menu a {
+  color: #54341B;
+  text-shadow: none;
+}
+body header.scroll .header .menu a:hover {
   color: #9cac45;
 }
 body #wrap {
@@ -217,6 +222,16 @@ body #wrap .new_section .new_contents div {
   flex-flow: column nowrap;
   gap: 20px;
   color: #54341B;
+  width: 672px;
+}
+body #wrap .new_section .new_contents div a:nth-child(1) {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/new_img2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 body #wrap .new_section .new_contents div .coment {
   color: #54341B;
@@ -240,6 +255,9 @@ body #wrap .new_section .new_contents div .coment .top h2 {
 body #wrap .new_section .new_contents div .coment .top h2 em {
   font-weight: 700;
 }
+body #wrap .new_section .new_contents div .coment .top h2 {
+  margin: 0;
+}
 body #wrap .new_section .new_contents div .coment .top .new_info {
   text-align: right;
   color: #CDB4A0;
@@ -247,6 +265,7 @@ body #wrap .new_section .new_contents div .coment .top .new_info {
   width: 100%;
   font-weight: 300;
   line-height: 120%;
+  margin: 0;
 }
 body #wrap .new_section .new_contents div .coment .top::after {
   content: "";
@@ -262,6 +281,15 @@ body #wrap .new_section .new_contents div .coment .new_coment {
   font-size: 0.875;
   margin-top: 15px;
   line-height: 140%;
+}
+body #wrap .new_section .new_contents div .coment:hover > * {
+  color: #9cac45;
+}
+body #wrap .new_section .new_contents div .coment:hover .top .new_info {
+  color: #9cac45;
+}
+body #wrap .new_section .new_contents div .coment:hover .top::after {
+  background-color: #9cac45;
 }
 body #wrap .monthly_section {
   background-image: url("../images/books_bg.png");
@@ -339,16 +367,19 @@ body #wrap .monthly_section .monthly_right .swiper_container {
   height: 579px;
   padding-top: 218px;
 }
-body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper {
+body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper {
   width: 855px;
+  overflow: hidden;
+}
+body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper {
   height: 311px;
   display: flex;
   flex-flow: row nowrap;
-  gap: 20px;
   bottom: 0;
+  width: max-content;
 }
 body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper .swiper-slide {
-  width: 172px !important;
+  width: auto;
 }
 body #wrap .monthly_section .monthly_right .swiper_container #monthly_swiper .swiper-wrapper .swiper-slide a img {
   margin-bottom: 10px;

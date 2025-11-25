@@ -13,8 +13,8 @@
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!--플러그인 필수 JS cdn 연결-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <!--플러그인 필수 JS cdn 연결--> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- js -->
     <link rel="stylesheet" href="./styles/reset.css">
@@ -144,9 +144,7 @@
             <div class="new_contents">
                 <img class="new_left_img" src="./images/new_img.png" alt="수지살몬 바디워시">
                 <div>
-                    <a href="#">
-                        <img src="./images/new_img2.png" alt="수지살몬 바디워시">
-                    </a>
+                    <a href="#"></a>
                     <a href="" class="coment">
                         <div class="top">
                             <h2><em>SUSIE SALMON.</em> BODY WASH</h2>
@@ -177,9 +175,6 @@
                 <!-- 상품 스와이퍼~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                 <div class="swiper_container">
                     <div class="swiper" id="monthly_swiper">
-                        <!-- 스와이퍼 버튼 wrapper 위 좌측위치 -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                         <!-- 보이는 공간 -->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -447,29 +442,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        const monthlySwiper = new Swiper("#monthly_swiper", {
-            loop:true,
-        });
-    </script>
-    <script>
-        const categorySwiper = new Swiper("#category_swiper", {
-            loop:true,
-        });
-    </script>
-    <script>
-        const mainbnrSwiper = new Swiper(".main_brn_swiper", {
-            loop:true,
-            pagination : {
-                el:'.swiper-pagination',
-                clickable:true,
-            },
-            navigation: {
-                nextEl:'.swiper-button-next',
-                prevEl:'.swiper-button-prev'
-            }
-        });
-    </script>
 </body>
 </html>
