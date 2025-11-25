@@ -23,11 +23,14 @@ body { width:1920;
         }
     }
     header.scroll {
-        background-color:red
         .header {
-            .logo {}
-            .menu { a{color:$font-color} a:hover {color:$point-green}}
-            .right_icon {a {}}
+            background-color:red;
+            .menu {
+                a {
+                    color:#54341B;
+                    text-shadow: none;
+                }
+            }
         }
     }
     #wrap { background-color:$bg_color; color:$font_color;
@@ -121,6 +124,9 @@ body { width:1920;
                 .new_left_img {}
                 div { display:flex; flex-flow:column nowrap; gap:20px; color:$font_color;
                     a {}
+                    a:hover {
+                        border:1px solid $font-color;
+                    }
                     .coment { color:$font_color;
                         display:flex; flex-flow:column nowrap; 
                         .top { position:relative; padding-bottom:15px;
