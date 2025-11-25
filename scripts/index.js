@@ -53,9 +53,14 @@ cards.forEach(card => {
 
 
 const monthlySwiper = new Swiper("#monthly_swiper", {
-    loop:false,
+    loop:true,
     slidesPerView: "auto",
     spaceBetween: 20,
+    speed:5000,
+    autoplay:{
+        delay:0,
+        disableOnInteraction: false,
+    },
 });
 const categorySwiper = new Swiper("#category_swiper", {
     loop:false,
